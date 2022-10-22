@@ -9,7 +9,7 @@ public class PlatformsProfile : Profile
     public PlatformsProfile()
     {
         // Source -> Target
-        CreateMap<Platform, PLatformReadDto>();
+        CreateMap<Platform, PlatformReadDto>();
         CreateMap<PlatformCreateDto, Platform>();
     }
 }
