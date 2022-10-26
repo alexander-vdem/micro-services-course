@@ -33,7 +33,7 @@ A follow-along implementation of Les Jackson's course on microservices found her
   docker push <docker user id>/commandservice:latest
   ```
 6.  Navigate to micro-services-course\K8S direcory
-  Revisit all .yaml files and substitute alexvdem with your docker <docker user id>
+  Revisit all .yaml files and substitute alexvdem with your docker docker user id
   - Apply PlatformService deployment
   ```sh
   kubectl apply -f .\platforms-depl.yaml
