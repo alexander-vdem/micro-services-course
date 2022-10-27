@@ -63,3 +63,12 @@ A follow-along implementation of Les Jackson's course on microservices found her
   ```sh
   kubectl apply -f .\ingress-srv.yaml
   ```
+  
+  - Apply Persistent Volume Claim for MSSQL deployment
+  ```sh
+  kubectl apply -f local-pvc.yaml
+  ```
+  - Create Kubernetes secret for storing passowrd key-value pair to serve MSSQL
+  ```sh
+  kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55w0rd!"
+  ```
