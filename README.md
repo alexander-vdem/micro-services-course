@@ -51,7 +51,7 @@ A follow-along implementation of Les Jackson's course on microservices found her
   
   - Apply deployment of Ingress nginx gateway 
   ```sh
-  kubectl apply -f .\https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.4.0/deploy/static/provider/cloud/deploy.yaml
+  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.4.0/deploy/static/provider/cloud/deploy.yaml
   ```
   
   - Insert entry in your hosts file 
