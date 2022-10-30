@@ -72,3 +72,8 @@ A follow-along implementation of Les Jackson's course on microservices found her
   ```sh
   kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55w0rd!"
   ```
+  
+  - Apply MSSQL container deployment alongside with it's cluster IP service and Loadbalancer service
+  ```sh
+  kubectl apply -f mssql-plat-depl.yamll
+  ```
