@@ -66,7 +66,7 @@ A follow-along implementation of Les Jackson's course on microservices found her
   
   - Apply Persistent Volume Claim for MSSQL deployment
   ```sh
-  kubectl apply -f local-pvc.yaml
+  kubectl apply -f .\local-pvc.yaml
   ```
   - Create Kubernetes secret for storing passowrd key-value pair to serve MSSQL
   ```sh
@@ -75,5 +75,10 @@ A follow-along implementation of Les Jackson's course on microservices found her
   
   - Apply MSSQL container deployment alongside with it's cluster IP service and Loadbalancer service
   ```sh
-  kubectl apply -f mssql-plat-depl.yamll
+  kubectl apply -f .\mssql-plat-depl.yamll
+  ```
+
+  - Apply RabbitMQ container deployment alongside with it's cluster IP service and Loadbalancer service
+   ```sh
+  kubectl apply -f .\rabbitmq-depl.yaml
   ```
