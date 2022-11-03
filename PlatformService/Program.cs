@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using PlatformService.AsynDataServices;
 using PlatformService.Data;
 using PlatformServices.SyncDataService.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 
 if(builder.Environment.IsDevelopment())
 {
@@ -22,6 +22,7 @@ else
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
