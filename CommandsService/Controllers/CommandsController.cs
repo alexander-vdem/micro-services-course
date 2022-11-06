@@ -34,7 +34,7 @@ public class CommandsController : ControllerBase
         return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commands));
     }
 
-    [HttpGet("{comandId}", Name = nameof(GetCommand))]
+    [HttpGet("{commandId}", Name = nameof(GetCommand))]
     public ActionResult<CommandReadDto> GetCommand(int platformId, int commandId)
     {
         Console.WriteLine($"--> Hitting {nameof(GetCommand)} for commandId {commandId} and plaformId {platformId}");

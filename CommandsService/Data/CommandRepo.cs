@@ -18,10 +18,8 @@ public class CommandRepo : ICommandRepo
             throw new ArgumentNullException();
         }
 
-        _context.Commands.Add(new Command
-        {
-            PlatformId = platformId
-        });
+        command.PlatformId = platformId;
+        _context.Commands.Add(command);
     }
 
     public void CreatePlatform(Platform plat)
@@ -51,10 +49,11 @@ public class CommandRepo : ICommandRepo
 
     public Command GetCommand(int platformId, int commandId)
     {
-        return(
-            from c in _context.Commands
+        var command = (from c in _context.Commands
             where c.Id == commandId && c.PlatformId == platformId
-            select new Command()).FirstOrDefault();
+            select c).FirstOrDefault();
+        
+        return command;    
     }
 
     public IEnumerable<Command> GetCommandsForPlatform(int platformId)

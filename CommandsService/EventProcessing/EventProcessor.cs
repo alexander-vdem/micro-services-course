@@ -40,8 +40,7 @@ public class EventProcessor : IEventProcessor
         Console.WriteLine("--> Determining event.");
 
         var eventType = JsonSerializer
-                        .Deserialize<GenericEventDto>(notifircationMessage)
-                        .ToString();
+                        .Deserialize<GenericEventDto>(notifircationMessage).Event;
 
         switch(eventType)
         {
@@ -72,6 +71,8 @@ public class EventProcessor : IEventProcessor
                 repo.CreatePlatform(plat);
                 repo.SaveChanges();   
             }
+
+            Console.WriteLine($"--> Platform {plat.Name} added to the DB with external ID {plat.ExternalID} and internal ID {plat.Id}");
         }
         catch(Exception e)
         {
