@@ -58,11 +58,12 @@ public class CommandRepo : ICommandRepo
 
     public IEnumerable<Command> GetCommandsForPlatform(int platformId)
     {
-        return(
-            from c in _context.Commands
+        var commands = (from c in _context.Commands
             where c.PlatformId == platformId
             orderby c.Platform.Name
-            select new Command()).AsEnumerable<Command>();
+            select c).AsEnumerable<Command>();
+
+            return commands;
     }
 
     public bool PlatformExists(int platformId)

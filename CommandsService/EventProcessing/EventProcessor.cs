@@ -72,7 +72,7 @@ public class EventProcessor : IEventProcessor
                 repo.SaveChanges();   
             }
 
-            Console.WriteLine($"--> Platform {plat.Name} added to the DB with external ID {plat.ExternalID} and internal ID {plat.Id}");
+            Console.WriteLine($"--> Platform {plat.Name} added to the DB with external ID {plat.ExternalID}");
         }
         catch(Exception e)
         {
