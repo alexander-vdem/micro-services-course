@@ -36,6 +36,7 @@ public class MessageBusClient : IMessageBusClient
         catch(Exception e)
         {
             Console.Write($"--> Could not connect to the message bus: {e.Message}");
+            throw;
         }
     }
 
@@ -74,7 +75,7 @@ public class MessageBusClient : IMessageBusClient
         }
     }
 
-    private void RabbitMQ_ConnectionShutDown(object sender, ShutdownEventArgs e)
+    private void RabbitMQ_ConnectionShutDown(object? sender, ShutdownEventArgs e)
     {
         Console.WriteLine("--> RabbitMQ Connection Shutdown.");
     }
