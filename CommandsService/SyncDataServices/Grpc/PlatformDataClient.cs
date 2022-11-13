@@ -30,7 +30,7 @@ public class PlatformDataClient : IPlatformDataClient
         }
         catch(Exception e)
         {
-            Console.WriteLine($"--> Failed calling GRPC servcer{_config["GrpcPlatform"]}. {e.Message}");
+            Console.WriteLine($"--> Failed calling GRPC server {_config["GrpcPlatform"]}. {e.Message}");
             return null;
         }
     }

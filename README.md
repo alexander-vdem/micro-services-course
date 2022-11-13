@@ -75,7 +75,7 @@ A follow-along implementation of Les Jackson's course on microservices found her
   
   - Apply MSSQL container deployment alongside with it's cluster IP service and Loadbalancer service
   ```sh
-  kubectl apply -f .\mssql-plat-depl.yamll
+  kubectl apply -f .\mssql-plat-depl.yaml
   ```
 
   - Apply RabbitMQ container deployment alongside with it's cluster IP service and Loadbalancer service
