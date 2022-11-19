@@ -82,3 +82,7 @@ A follow-along implementation of Les Jackson's course on microservices found her
    ```sh
   kubectl apply -f .\rabbitmq-depl.yaml
   ```
+  
+  ## Diagrams
+  
+  ![Alt](https://github.com/alexander-vdem/micro-services-course/blob/master/Sequence%20Diagram.drawio.png)
